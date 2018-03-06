@@ -1,3 +1,3 @@
-import "./foo"
+import { hello } from "./foo"
 
-foo.hello()
+hello()
