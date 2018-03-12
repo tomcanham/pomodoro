@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h3>
+    Add Todo:
+  </h3>
+  <input
+    name="text"
+    onChange={[Function]}
+    type="text"
+    value="foo"
+  />
+</form>
+`;
+
+exports[`Link changes the class when hovered 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h3>
+    Add Todo:
+  </h3>
+  <input
+    name="text"
+    onChange={[Function]}
+    type="text"
+    value="foo"
+  />
+</form>
+`;

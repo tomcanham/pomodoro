@@ -4,7 +4,7 @@ import * as actions from '../redux/todos/actions'
 import * as constants from '../redux/todos/constants'
 import PropTypes from 'prop-types'
 
-const AddTodo = (props) => {
+export const AddTodo = (props) => {
   const { addTodo, value, setValue } = props
 
   const onSubmit = (e) => { e.preventDefault(); addTodo() }
@@ -20,7 +20,7 @@ AddTodo.propTypes = {
   setValue: PropTypes.func.isRequired
 }
 
-const Todo = (props) => {
+export const Todo = (props) => {
   const { todo, completeTodo } = props
 
   if (todo.isComplete) {
@@ -35,7 +35,7 @@ Todo.propTypes = {
   completeTodo: PropTypes.func.isRequired,
 }
 
-class TaskList extends React.Component {
+export class TaskList extends React.Component {
   constructor() {
     super()
     this.state = {

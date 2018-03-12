@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import TaskList from './task_list'
-import Timer from './timer'
+import TaskList from './TaskList'
+import Timer from './Timer'
 import store from '../redux/store'
 
 export default class App extends React.Component {
