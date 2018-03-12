@@ -13,7 +13,7 @@ const ROUNDS_UNTIL_LONG_BREAK = 3
 const ROUND_WORK_INTERVAL = 25
 const ROUND_SHORT_BREAK_INTERVAL = 5
 const ROUND_LONG_BREAK_INTERVAL = 25
-const ROUND_TIME_UNIT = 'seconds'
+const ROUND_TIME_UNIT = 'minutes'
 
 export function timer(state = getInitialState(), action) {
   switch (action.type) {

@@ -2,14 +2,14 @@ import * as c from "./constants"
 
 export function addTodo(text) {
   return {
-    type: TODO_ADD,
+    type: c.TODO_ADD,
     text
   }
 }
 
 export function completeTodo(id) {
   return {
-    type: TODO_COMPLETE,
+    type: c.TODO_COMPLETE,
     id
   }
 }

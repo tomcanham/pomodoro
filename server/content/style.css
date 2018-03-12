@@ -1,0 +1,13 @@
+body {
+    background-color: linen;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+}
+
+#taskList {
+  cursor: pointer;
+}
