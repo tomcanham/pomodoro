@@ -12,17 +12,17 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'server/content')
   },
 
-  // Run babel on all .js files and skip those in node_modules
+  // Run babel on all .js(x) files and skip those in node_modules
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: "babel-loader",
+        loader: "babel-loader",
         exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
-        use: "babel-loader",
+        loader: "babel-loader",
         exclude: /node_modules/
       }
     ]

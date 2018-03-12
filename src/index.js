@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Foo from "./foo"
+import App from "./components/app"
+import store from "./redux/store"
 
-ReactDOM.render(<Foo />, document.getElementById('react-root'))
+ReactDOM.render(<App />, document.getElementById('react-root'))

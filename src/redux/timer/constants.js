@@ -1,0 +1,7 @@
+export const TIMER_RESET = "TIMER_RESET"
+export const TIMER_TICK = "TIMER_TICK"
+export const TIMER_START = "TIMER_START"
+export const TIMER_STOP = "TIMER_STOP"
+export const TIMER_ROUND = "TIMER_ROUND"
+export const TIMER_SHORT_BREAK = "TIMER_SHORT_BREAK"
+export const TIMER_LONG_BREAK = "TIMER_LONG_BREAK"
