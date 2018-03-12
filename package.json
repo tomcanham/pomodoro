@@ -25,12 +25,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.2",
     "lodash.clonedeep": "^4.5.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-test-renderer": "^16.2.0",
     "redux": "^3.7.2",
     "regenerator-runtime": "^0.11.1",
+    "sinon": "^4.4.3",
     "webpack": "^4.1.0",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
@@ -40,7 +43,6 @@
     "moment": "^2.21.0",
     "moment-round": "^1.0.1",
     "momentjs": "^2.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.2.0"
   }
 }
