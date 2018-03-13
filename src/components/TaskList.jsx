@@ -24,9 +24,9 @@ export const Todo = (props) => {
   const { todo, completeTodo } = props
 
   if (todo.isComplete) {
-    return <li onClick={() => completeTodo(todo.id)} key={todo.id}><del>{todo.text}</del></li>
+    return <li className="todo" onClick={() => completeTodo(todo.id)} key={todo.id}><del>{todo.text}</del></li>
   } else {
-    return <li onClick={() => completeTodo(todo.id)} key={todo.id}>{todo.text}</li>
+    return <li className="todo" onClick={() => completeTodo(todo.id)} key={todo.id}>{todo.text}</li>
   }
 }
 
@@ -66,7 +66,7 @@ export class TaskList extends React.Component {
     const { newTodo } = this.state
 
     return (<div id="taskList">
-      <h1>To Do:</h1>
+      <h1>To Do</h1>
       <ul>
         {todos.map((todo) => <Todo key={todo.id} todo={todo} completeTodo={completeTodo} />)}
       </ul>

@@ -8,7 +8,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <div style={{textAlign: 'center'}}>
+        <div className='content' style={{textAlign: 'center'}}>
           <TaskList />
           <Timer />
         </div>

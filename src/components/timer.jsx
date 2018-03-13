@@ -54,12 +54,12 @@ class Timer extends React.Component {
     if (finish) {
       const duration = finish.diff(moment(), 'minutes')
       const description = intervalType === constants.TIMER_ROUND ? "break" : "break ends"
-      return (<div>
+      return (<div id="timer">
         <h1>{duration} minutes remaining until {description} ({rounds} round(s) remaining until long break)</h1>
         <button onClick={() => this.onTimerClick()} type="button">Stop Timer</button>
       </div>)
     } else {
-      return (<div>
+      return (<div id="timer">
         <button onClick={() => this.onTimerClick()} type="button">Start Timer</button>
       </div>)
     }

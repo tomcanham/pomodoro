@@ -11,3 +11,38 @@ h1 {
 #taskList {
   cursor: pointer;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#taskList {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid black;
+}
+
+#taskList h1 {
+  width: 100%;
+  margin: 1em 0 1em 0;
+  border-bottom: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.todo:nth-child(even) {
+  background: silver;
+}
+
+#timer {
+  flex-grow: 1;
+}
