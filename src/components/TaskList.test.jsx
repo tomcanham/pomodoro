@@ -1,6 +1,10 @@
 import React from 'react'
 import { AddTodo, Todo, TaskList } from './TaskList'
 import sinon from "sinon"
+import chai from "chai"
+import sinonChai from "sinon-chai"
+chai.should()
+chai.use(sinonChai)
 import { configure, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
@@ -30,4 +34,12 @@ test('Link changes the class when hovered', () => {
 
   // ...and one new task entry box.
   expect(wrapper.find(AddTodo).length).toBe(1)
+
+  // expect that modifying the input should update the container's state
+  wrapper.find('input').simulate('change', {target: {value: 'Foobar'}})
+  expect(wrapper.state().newTodo).toBe('Foobar')
+
+  // expect that submitting the form should trigger the addTodo event
+  wrapper.find('form').simulate('submit')
+  addTodo.should.have.been.calledWith('Foobar')
 })
