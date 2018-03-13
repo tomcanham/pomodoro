@@ -3,7 +3,7 @@ import { AddTodo, Todo, TaskList } from './TaskList'
 import sinon from "sinon"
 import chai from "chai"
 import sinonChai from "sinon-chai"
-chai.should()
+const expect = chai.expect
 chai.use(sinonChai)
 import { configure, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -27,19 +27,27 @@ test('Link changes the class when hovered', () => {
   )
 
   // should have one task list
-  expect(wrapper.find(TaskList).length).toBe(1)
+  expect(wrapper.find(TaskList)).to.have.length(1)
 
   // ...two tasks...
-  expect(wrapper.find(Todo).length).toBe(2)
+  expect(wrapper.find(Todo)).to.have.length(2)
 
   // ...and one new task entry box.
-  expect(wrapper.find(AddTodo).length).toBe(1)
+  expect(wrapper.find(AddTodo)).to.have.length(1)
 
   // expect that modifying the input should update the container's state
   wrapper.find('input').simulate('change', {target: {value: 'Foobar'}})
-  expect(wrapper.state().newTodo).toBe('Foobar')
+  expect(wrapper.state().newTodo).to.equal('Foobar')
 
   // expect that submitting the form should trigger the addTodo event
   wrapper.find('form').simulate('submit')
-  addTodo.should.have.been.calledWith('Foobar')
+  expect(addTodo).to.have.been.calledWith('Foobar')
+
+  // expect the tasks to be in order
+  expect(wrapper.find(Todo).first().text()).to.equal('Wax the Buffalo')
+
+  // and expect that clicking on them triggers the completeTodo event
+  // for the correct todo
+  wrapper.find(Todo).first().simulate('click')
+  expect(completeTodo).to.have.been.calledWith(1)
 })
