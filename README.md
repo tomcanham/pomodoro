@@ -7,3 +7,5 @@ New items can be added to the task list by typing in a line of description and p
 The countdown timer will countdown three intervals of 25 minutes, with 5 minute breaks in between, followed by a 25 minute break.
 
 To build, install Node.js capable of dealing with at least ES6, as well as webpack. From the root of the project, run *npm install*. Then run *npm run build* to build the SPA. Finally, copy the bundle.js from the *dist* folder o the server/content folder, and serve up the files in server/content (a simple Node.js server is included for this purpose; you can CD into the server directory and just run *node index.js*).
+
+Testing uses the Jest, Chai, and Sinon frameworks. Right now there is only one set of basic tests (for the TaskList component), but this shows the basic methodology.
