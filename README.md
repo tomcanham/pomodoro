@@ -8,4 +8,4 @@ The countdown timer will countdown three intervals of 25 minutes, with 5 minute 
 
 To build, install Node.js capable of dealing with at least ES6, as well as webpack. From the root of the project, run *npm install*. Then run *npm run build* to build the SPA. Finally, copy the bundle.js from the *dist* folder o the server/content folder, and serve up the files in server/content (a simple Node.js server is included for this purpose; you can CD into the server directory and just run *node index.js*).
 
-Testing uses the Jest, Chai, and Sinon frameworks. Right now there is only one set of basic tests (for the TaskList component), but this shows the basic methodology.
+Testing uses the Jest, Chai, and Sinon frameworks. Right now there is only one set of basic tests (for the TaskList component), but this shows the basic methodology. To run tests (after *npm install* etc.), simply run *npm test*; this will run the Jest framework in "watch" mode, watching for changes.
